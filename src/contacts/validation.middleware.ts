@@ -11,8 +11,6 @@ export class ValidationMiddleware implements NestMiddleware {
     const arr = Object.keys(body);
     const isValid = /* Your validation logic */ true;
 
-    console.log('arr', arr);
-
     if (!arr.length) {
       return res.status(200).json({ ok: false, message: 'Validation failed' });
     }
